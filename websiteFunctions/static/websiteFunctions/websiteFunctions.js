@@ -1723,8 +1723,7 @@ app.controller('websitePages', function ($scope, $http, $timeout, $window) {
 
         var domain = $("#domainNamePage").text();
         var path = $scope.installPath;
-        var sitename = $scope.sitename;
-        var username = $scope.username;
+        var username = 'admin';
         var password = $scope.password;
         var prefix = $scope.prefix;
 
@@ -1740,10 +1739,9 @@ app.controller('websitePages', function ($scope, $http, $timeout, $window) {
 
         var data = {
             domain: domain,
+            siteName: $scope.siteName,
             home: home,
             path: path,
-            sitename: sitename,
-            username: username,
             password: password,
             prefix: prefix,
         };
@@ -4675,7 +4673,7 @@ app.controller('installJoomlaCTRL', function ($scope, $http, $timeout) {
             domain: domain,
             home: home,
             path: path,
-            sitename: $scope.blogTitle,
+            siteName: $scope.siteName,
             username: $scope.adminUser,
             passwordByPass: $scope.adminPassword,
             prefix: $scope.databasePrefix
